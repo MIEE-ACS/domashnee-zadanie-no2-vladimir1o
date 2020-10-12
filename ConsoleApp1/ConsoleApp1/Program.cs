@@ -10,6 +10,7 @@ namespace ConsoleApp1
             {
                 Console.Write("Введите R: ");
                 double R = float.Parse(Console.ReadLine());
+                double segment0 = 3;
                 if (R <= 0)
                 {
                     Console.WriteLine("Введены неправельные данные!");
@@ -23,17 +24,17 @@ namespace ConsoleApp1
 
                         if (x < -7 || x > 11)
                         {
-                            Console.WriteLine("\tФункция не определена");
+                            Console.WriteLine($"\ty({x:0.00}) - Функция не определена");
                         }
                         else if (Math.Round(x, 2) <= -3)
                         {
-                            Console.WriteLine($"\ty({x:0.00}) = {3}");
+                            Console.WriteLine($"\ty({x:0.00}) = {segment0:0.000}");
                         }
                         else if (x < 3)
                         {
                             if ((R < 3) && (Math.Abs(x) > R))
                             {
-                                Console.WriteLine("\tФункция не определена");
+                                Console.WriteLine($"\ty({x:0.00}) - Функция не определена");
                             }
                             else
                             {
